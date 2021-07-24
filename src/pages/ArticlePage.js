@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticlesList from '../components/ArticlesList';
 import articles from './article-content';
+import NotFoundPage from './NotFoundPage';
 
 const ArticlePage = ({match}) => {
     const name = match.params.name;
@@ -8,7 +9,7 @@ const ArticlePage = ({match}) => {
     const relatedArticles = articles.filter( article => article.name !== name);
     if( !article ) {
         return (
-            <h1>No article found</h1>
+            <NotFoundPage />
         )
     }
     return (
