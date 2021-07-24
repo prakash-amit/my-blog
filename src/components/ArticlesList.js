@@ -1,10 +1,8 @@
 import React from 'react';
-import articles from './article-content';
 import {Link} from 'react-router-dom';
-const ArticlesList = () => {
-    return (
-        <>
-        <h1>Articles List</h1>
+
+const ArticlesList = ({ articles }) => (
+    <>
         {
             articles.map( (article, key) =>
             {
@@ -17,9 +15,8 @@ const ArticlesList = () => {
 
             }
             )
-        }
-        </>
-    );
-}
+        }    
+    </>
+);
 
 export default ArticlesList;
